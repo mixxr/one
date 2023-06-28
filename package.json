@@ -1,10 +1,10 @@
 {
-  "name": "node-headless-ssr-proxy-sample",
+  "name": "my-brand-one",
   "version": "21.2.1",
   "description": "Node server-side-rendering proxy sample for running JSS apps under Node hosting",
-  "main": "./src/index.ts",
+  "main": "./src/index.js",
   "scripts": {
-    "start": "ts-node ./src/index.ts"
+    "start": "node ./src/index.js"
   },
   "engines": {
     "node": ">=12",

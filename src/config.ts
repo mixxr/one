@@ -1,5 +1,5 @@
 import { ProxyConfig, ServerBundle } from '@sitecore-jss/sitecore-jss-proxy';
-import fs from 'fs';
+import * as fs from 'fs';
 // import { RestDictionaryService } from '@sitecore-jss/sitecore-jss/i18n';
 import { httpAgentsConfig } from './httpAgents';
 
@@ -108,7 +108,7 @@ export const config: ProxyConfig = {
     // when proxying to a SSL Sitecore instance.
     // This is a major security issue, so NEVER EVER set this to false
     // outside local development. Use a real CA-issued certificate.
-    secure: false,
+    secure: true,
     xfwd: true,
     // BEGIN DEMO CUSTOMIZATION - for multisite event pages should be loaded from the main app Sitecore site
     onProxyReq: (proxyReq, _req, _res) => {
