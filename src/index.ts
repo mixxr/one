@@ -1,8 +1,8 @@
 import express from 'express';
 import compression from 'compression';
 import 'dotenv/config';
-import scProxy from '@sitecore-jss/sitecore-jss-proxy';
-import { config } from './config';
+//import scProxy from '@sitecore-jss/sitecore-jss-proxy';
+//import { config } from './config';
 const http = require("http");
 //import { cacheMiddleware } from './cacheMiddleware';
 
@@ -17,12 +17,13 @@ app.use(compression());
 app.settings['x-powered-by'] = false;
 
 // Serve static app assets from local /dist folder
-app.use(
-  '/dist',
-  express.static('dist', {
-    fallthrough: false, // force 404 for unknown assets under /dist
-  })
-);
+// mixer: TODO
+// app.use(
+//   '/dist',
+//   express.static('dist', {
+//     fallthrough: false, // force 404 for unknown assets under /dist
+//   })
+// );
 
 /**
  * Output caching, can be enabled,
@@ -44,7 +45,13 @@ app.use((req, _res, next) => {
 });
 
 // For any other requests, we render app routes server-side and return them
-app.use('*', scProxy(config.serverBundle.renderView, config, config.serverBundle.parseRouteUrl));
+// mixer: TODO
+// app.use('*', scProxy(config.serverBundle.renderView, config, config.serverBundle.parseRouteUrl));
+
+// mixer: TO DELETE
+app.get('/', (_req, res) => {
+  res.send('Hello World!')
+})
 
 const server = http.createServer(app);
 server.listen(port);
