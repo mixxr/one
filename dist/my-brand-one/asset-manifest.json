@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/dist/my-brand-one/static/css/main.127276c2.css",
+    "main.js": "/dist/my-brand-one/static/js/main.15661a93.js",
+    "static/media/sc_logo.svg": "/dist/my-brand-one/static/media/sc_logo.b15a7ebbff46e93c94f185a7c19db62e.svg",
+    "index.html": "/dist/my-brand-one/index.html",
+    "main.127276c2.css.map": "/dist/my-brand-one/static/css/main.127276c2.css.map",
+    "main.15661a93.js.map": "/dist/my-brand-one/static/js/main.15661a93.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.127276c2.css",
+    "static/js/main.15661a93.js"
+  ]
+}
